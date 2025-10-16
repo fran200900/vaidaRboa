@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vai dar Boa</title>
+
+  <!-- SEO META TAGS -->
+  <meta name="description" content="VaiDarBoa é o site de apostas mais confiável do Brasil! Oferece jogos rápidos, bônus exclusivos, saques automáticos via Pix e atendimento 24 horas. Diversão, praticidade e lucros em um só lugar!">
+  <meta name="keywords" content="apostas online, site de apostas, bônus, Pix, jogos, prêmios, lucros, Brasil, apostas seguras, palpites, diversão, suporte 24h">
+  <meta name="author" content="VaiDarBoa">
+
+  <!-- ÍCONE DO SITE -->
+  <link rel="icon" type="image/webp" href="coelho.webp">
+  <link rel="shortcut icon" type="image/webp" href="coelho.webp">
+
+  <!-- OPEN GRAPH (Facebook, Instagram, WhatsApp) -->
+  <meta property="og:title" content="Vai dar Boa - Apostas Online Seguras">
+  <meta property="og:description" content="VaiDarBoa é o site de apostas mais confiável do Brasil! Jogos rápidos, bônus exclusivos, Pix instantâneo e suporte 24h. Jogue e aumente seus lucros!">
+  <meta property="og:image" content="coelho.webp"> <!-- 🔁 Substitua por sua URL real -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaidarboa.vip/"> <!-- 🔁 Troque pelo domínio do seu site -->
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vai dar Boa - Apostas Online Seguras">
+  <meta name="twitter:description" content="Aposte com segurança, receba via Pix e aproveite bônus exclusivos na VaiDarBoa.">
+  <meta name="twitter:image" content="https://seudominio.com/coelho.webp"> <!-- 🔁 Substitua pela URL da imagem -->
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #000;
+    }
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      border: none;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 5px 0;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .promoter-message {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #fff;
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+      cursor: pointer;
+      margin: 0;
+    }
+    .close-button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .close-button:hover {
+      color: #ccc;
+    }
+    .overlay::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border: 1px solid transparent;
+      border-image: linear-gradient(45deg, #00ff00, #ff00ff, #0000ff) 1;
+      border-radius: 2px;
+      z-index: -1;
+      animation: borderGlow 2s infinite;
+    }
+    @keyframes borderGlow {
+      0% {
+        opacity: 0.5;
+        border-image: linear-gradient(45deg, #00ff00, #ff00ff, #0000ff) 1;
+      }
+      50% {
+        opacity: 1;
+        border-image: linear-gradient(45deg, #ff00ff, #0000ff, #00ff00) 1;
+      }
+      100% {
+        opacity: 0.5;
+        border-image: linear-gradient(45deg, #0000ff, #00ff00, #ff00ff) 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="promoter-message" onclick="window.location.href='https://wa.me/83994073892';">
+      Torne-se um promotor clicando aqui
+    </div>
+    <button class="close-button" onclick="document.getElementsByClassName('overlay')[0].style.display='none';">&times;</button>
+  </div>
+
+  <iframe id="frame" src="https://app.vaidarboa.com/pr/NEyGg40X"></iframe>
+
+  <script>
+    window.addEventListener("load", () => {
+      const requestFullscreen = () => {
+        const el = document.documentElement;
+        if (el.requestFullscreen) el.requestFullscreen();
+        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+        else if (el.msRequestFullscreen) el.msRequestFullscreen();
+      };
+      requestFullscreen();
+      document.body.addEventListener("click", requestFullscreen, { once: true });
+    });
+  </script>
+</body>
+</html>
