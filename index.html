@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vai dar Boa</title>
+
+  <!-- SEO META TAGS -->
   <meta name="description" content="VaiDarBoa é o site de apostas mais confiável do Brasil! Oferece jogos rápidos, bônus exclusivos, saques automáticos via Pix e atendimento 24 horas. Diversão, praticidade e lucros em um só lugar!">
-  <title>Vai dar boa</title>
+  <meta name="keywords" content="apostas online, site de apostas, bônus, Pix, jogos, prêmios, lucros, Brasil, apostas seguras, palpites, diversão, suporte 24h">
+  <meta name="author" content="VaiDarBoa">
+
+  <!-- ÍCONE DO SITE -->
+  <link rel="icon" type="image/webp" href="coelho.webp">
+  <link rel="shortcut icon" type="image/webp" href="coelho.webp">
+
+  <!-- OPEN GRAPH (Facebook, Instagram, WhatsApp) -->
+  <meta property="og:title" content="Vai dar Boa - Apostas Online Seguras">
+  <meta property="og:description" content="VaiDarBoa é o site de apostas mais confiável do Brasil! Jogos rápidos, bônus exclusivos, Pix instantâneo e suporte 24h. Jogue e aumente seus lucros!">
+  <meta property="og:image" content="https://seudominio.com/coelho.webp"> <!-- 🔁 Substitua por sua URL real -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaidarboa.vip/"> <!-- 🔁 Troque pelo domínio do seu site -->
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vai dar Boa - Apostas Online Seguras">
+  <meta name="twitter:description" content="Aposte com segurança, receba via Pix e aproveite bônus exclusivos na VaiDarBoa.">
+  <meta name="twitter:image" content="https://seudominio.com/coelho.webp"> <!-- 🔁 Substitua pela URL da imagem -->
+
   <style>
     html, body {
       margin: 0;
@@ -29,18 +52,18 @@
       left: 0;
       width: 100%;
       background-color: #333;
-      padding: 10px 0;
+      padding: 5px 0;
       text-align: center;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
     .promoter-message {
       font-family: Arial, sans-serif;
-      font-size: 18px;
+      font-size: 14px;
       color: #fff;
       text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
       cursor: pointer;
-      margin: 5px 0;
+      margin: 0;
     }
     .close-button {
       position: absolute;
@@ -56,7 +79,6 @@
     .close-button:hover {
       color: #ccc;
     }
-    /* Animated decorative border for the overlay */
     .overlay::before {
       content: '';
       position: absolute;
@@ -93,10 +115,10 @@
     </div>
     <button class="close-button" onclick="document.getElementsByClassName('overlay')[0].style.display='none';">&times;</button>
   </div>
+
   <iframe id="frame" src="https://app.vaidarboa.com/pr/NEyGg40X"></iframe>
 
   <script>
-    // Tenta colocar o site em tela cheia automaticamente
     window.addEventListener("load", () => {
       const requestFullscreen = () => {
         const el = document.documentElement;
@@ -104,8 +126,6 @@
         else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
         else if (el.msRequestFullscreen) el.msRequestFullscreen();
       };
-
-      // Alguns navegadores exigem clique para liberar o modo fullscreen
       requestFullscreen();
       document.body.addEventListener("click", requestFullscreen, { once: true });
     });
