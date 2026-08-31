@@ -3,121 +3,480 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vai dar Boa</title>
 
-  <!-- Google tag (gtag.js) - Google Analytics + Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MREJ9TL12B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <title>Vai Dar Boa - Site em Atualização</title>
 
-    /* Google Analytics GA4 */
-    gtag('config', 'G-MREJ9TL12B');
+  <meta name="description" content="O Vai Dar Boa está passando por uma atualização. Enquanto isso, acesse o Super Acertos e faça seu cadastro para não perder os bônus.">
+  <meta name="robots" content="noindex, nofollow">
 
-    /* Google Ads */
-    gtag('config', 'AW-17884379098');
-  </script>
-
-  <!-- SEO META TAGS -->
-  <meta name="description" content="VaiDarBoa é o site de apostas mais confiável do Brasil! Oferece jogos rápidos, bônus exclusivos, saques automáticos via Pix e atendimento 24 horas.">
-  <meta name="keywords" content="apostas online, site de apostas, bônus, Pix, jogos, apostas seguras, Brasil">
-  <meta name="author" content="VaiDarBoa">
-
-  <!-- ÍCONE -->
   <link rel="icon" type="image/webp" href="coelho.webp">
-  <link rel="shortcut icon" type="image/webp" href="coelho.webp">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Vai dar Boa - Apostas Online Seguras">
-  <meta property="og:description" content="Aposte com segurança, bônus exclusivos e Pix instantâneo.">
-  <meta property="og:image" content="https://seudominio.com/coelho.webp">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vaidarboa.vip/">
-  <meta property="og:locale" content="pt_BR">
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vai dar Boa - Apostas Online">
-  <meta name="twitter:description" content="Aposte com segurança e receba via Pix.">
-  <meta name="twitter:image" content="https://seudominio.com/coelho.webp">
 
   <style>
-    html, body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
     }
-    iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      border: none;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
+
+    html,
+    body {
       width: 100%;
-      background: #333;
-      padding: 6px 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 50% 15%, rgba(93, 255, 0, 0.13), transparent 30%),
+        linear-gradient(145deg, #000000 0%, #00140a 50%, #000000 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(45deg, transparent 48%, #58ff00 49%, transparent 50%),
+        linear-gradient(-45deg, transparent 48%, #58ff00 49%, transparent 50%);
+      background-size: 180px 180px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      min-height: 100vh;
+      margin: auto;
+      padding: 35px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* LOGO */
+
+    .logo {
+      width: 210px;
+      max-width: 65vw;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 18px rgba(101, 255, 0, 0.35));
+    }
+
+    /* ÍCONE */
+
+    .tools {
+      font-size: 58px;
+      margin: 5px 0 10px;
+      filter: drop-shadow(0 0 12px rgba(106, 255, 0, 0.8));
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    /* TÍTULO */
+
+    h1 {
       text-align: center;
-      z-index: 1000;
-    }
-    .promoter-message {
+      font-size: clamp(42px, 8vw, 82px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -2px;
       color: #fff;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(255,255,255,0.12);
+    }
+
+    h1 span {
+      color: #69ff00;
+      display: block;
+      text-shadow: 0 0 18px rgba(105, 255, 0, 0.35);
+    }
+
+    .subtitle {
+      margin-top: 24px;
+      text-align: center;
+      font-size: clamp(18px, 3vw, 25px);
+      line-height: 1.4;
+      color: #eee;
+      max-width: 700px;
+    }
+
+    .subtitle strong {
+      color: #69ff00;
+    }
+
+    /* CARD */
+
+    .card {
+      width: 100%;
+      max-width: 760px;
+      margin-top: 35px;
+      padding: 28px;
+      border: 1px solid #69ff00;
+      border-radius: 20px;
+      background: rgba(0, 25, 10, 0.75);
+      box-shadow:
+        0 0 25px rgba(105, 255, 0, 0.10),
+        inset 0 0 30px rgba(105, 255, 0, 0.03);
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 20px;
+      color: #ddd;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      font-size: clamp(36px, 7vw, 58px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      margin-bottom: 8px;
+    }
+
+    .brand .white {
+      color: #fff;
+    }
+
+    .brand .green {
+      color: #69ff00;
+      text-shadow: 0 0 15px rgba(105, 255, 0, 0.3);
+    }
+
+    .site-url {
+      font-size: 16px;
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+
+    /* BOTÃO */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 460px;
+      min-height: 58px;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #49b900, #83ff22);
+      color: #071000;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 0 0 25px rgba(105, 255, 0, 0.3);
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 0 35px rgba(105, 255, 0, 0.5);
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    /* BÔNUS */
+
+    .bonus {
+      width: 100%;
+      max-width: 760px;
+      margin-top: 22px;
+      padding: 25px;
+      border: 1px solid #69ff00;
+      border-radius: 20px;
+      background: rgba(0, 20, 8, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .gift {
+      width: 75px;
+      height: 75px;
+      min-width: 75px;
+      border: 2px solid #69ff00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      box-shadow: 0 0 20px rgba(105, 255, 0, 0.15);
+    }
+
+    .bonus-text {
+      font-size: clamp(20px, 4vw, 29px);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .bonus-text span {
+      color: #69ff00;
+      display: block;
+    }
+
+    /* CONTADOR */
+
+    .redirect {
+      margin-top: 20px;
+      color: #aaa;
       font-size: 14px;
-      font-family: Arial, sans-serif;
-      cursor: pointer;
-      text-shadow: 0 0 5px #00ff00;
+      text-align: center;
     }
-    .close-button {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
+
+    .redirect strong {
+      color: #69ff00;
+    }
+
+    /* BENEFÍCIOS */
+
+    .benefits {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .benefit {
+      text-align: center;
+      font-size: 13px;
+      color: #ddd;
+      padding: 10px;
+    }
+
+    .benefit-icon {
+      font-size: 27px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .benefit strong {
+      display: block;
       color: #fff;
-      font-size: 18px;
-      cursor: pointer;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 30px;
+      padding-bottom: 10px;
+      color: #666;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+      .container {
+        padding: 25px 15px;
+      }
+
+      .logo {
+        width: 170px;
+      }
+
+      .tools {
+        font-size: 45px;
+      }
+
+      h1 {
+        font-size: 47px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+        margin-top: 18px;
+      }
+
+      .card {
+        margin-top: 25px;
+        padding: 22px 15px;
+      }
+
+      .brand {
+        font-size: 37px;
+      }
+
+      .site-url {
+        font-size: 14px;
+      }
+
+      .bonus {
+        padding: 18px 15px;
+        gap: 15px;
+      }
+
+      .gift {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        font-size: 28px;
+      }
+
+      .bonus-text {
+        font-size: 19px;
+      }
+
+      .button {
+        font-size: 17px;
+      }
+
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="overlay">
-    <div class="promoter-message"
-      onclick="window.location.href='https://wa.me/558393753199?text=ola%2C%20quero%20ser%20um%20promotor%2C%20como%20fa%C3%A7o%3F';">
-      Venha se tornar um grande promotor, clicando aqui
+
+  <main class="container">
+
+    <!-- LOGO -->
+    <img
+      src="coelho.webp"
+      alt="Vai Dar Boa"
+      class="logo"
+    >
+
+    <!-- ÍCONE -->
+    <div class="tools">🛠️</div>
+
+    <!-- TÍTULO -->
+    <h1>
+      SITE EM
+      <span>ATUALIZAÇÃO</span>
+    </h1>
+
+    <p class="subtitle">
+      Estamos trabalhando para oferecer
+      <strong>a melhor experiência</strong> para você!
+    </p>
+
+    <!-- SUPER ACERTOS -->
+    <section class="card">
+
+      <div class="card-title">
+        Enquanto isso, você será direcionado para:
+      </div>
+
+      <div class="brand">
+        <span class="white">SUPER</span><span class="green">ACERTOS</span>
+      </div>
+
+      <div class="site-url">
+        superacertos.com.br
+      </div>
+
+      <a
+        href="https://superacertos.com.br/"
+        class="button"
+      >
+        🚀 ACESSAR AGORA
+      </a>
+
+    </section>
+
+    <!-- BÔNUS -->
+    <section class="bonus">
+
+      <div class="gift">
+        🎁
+      </div>
+
+      <div class="bonus-text">
+        Entre e se cadastre-se para
+        <span>não perder os bônus</span>
+      </div>
+
+    </section>
+
+    <!-- CONTADOR -->
+    <div class="redirect">
+      Você será redirecionado automaticamente em
+      <strong><span id="contador">8</span> segundos</strong>.
     </div>
-    <button class="close-button"
-      onclick="document.querySelector('.overlay').style.display='none';">
-      &times;
-    </button>
-  </div>
 
-  <iframe
-    src="https://app.bancavaidarboa.club/pr/NEyGg40X"
-    allow="clipboard-read; clipboard-write; fullscreen">
-  </iframe>
+    <!-- BENEFÍCIOS -->
+    <section class="benefits">
 
+      <div class="benefit">
+        <span class="benefit-icon">🛡️</span>
+        <strong>SITE SEGURO</strong>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">⚡</span>
+        <strong>PIX RÁPIDO</strong>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">🎧</span>
+        <strong>ATENDIMENTO</strong>
+      </div>
+
+      <div class="benefit">
+        <span class="benefit-icon">🔒</span>
+        <strong>ACESSO SEGURO</strong>
+      </div>
+
+    </section>
+
+    <footer>
+      © Vai Dar Boa — Em atualização
+    </footer>
+
+  </main>
+
+
+  <!-- REDIRECIONAMENTO AUTOMÁTICO -->
   <script>
-    window.addEventListener("load", () => {
-      const requestFullscreen = () => {
-        const el = document.documentElement;
-        if (el.requestFullscreen) el.requestFullscreen();
-        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-        else if (el.msRequestFullscreen) el.msRequestFullscreen();
-      };
-      requestFullscreen();
-      document.body.addEventListener("click", requestFullscreen, { once: true });
-    });
+
+    let segundos = 8;
+
+    const contador = document.getElementById("contador");
+
+    const intervalo = setInterval(function () {
+
+      segundos--;
+
+      contador.textContent = segundos;
+
+      if (segundos <= 0) {
+
+        clearInterval(intervalo);
+
+        window.location.href = "https://superacertos.com.br/";
+
+      }
+
+    }, 1000);
+
   </script>
+
 </body>
 </html>
