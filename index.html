@@ -4,349 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vai Dar Boa- bônus todos os dias  </title>
+  <title>Vai Dar Boa- bônus todos os dias</title>
 
-  <meta name="description" content="O Vai Dar Boa é a plataforma que mais cresce no brasil, venha e aproveite os bonus diarios.">
+  <meta name="description" content="Conheça a Vai Dar Boa. Acesse nossa plataforma de apostas esportivas e jogos online.">
   <meta name="robots" content="index, follow">
 
-  <link rel="icon" type="image/webp" href="coelho.webp">
+  <link rel="canonical" href="https://vaidarboa.vip/">
+  <link rel="alternate" hreflang="pt-BR" href="https://vaidarboa.vip/">
+
+  <!-- Redes sociais -->
+  <meta property="og:title" content="Vai Dar Boa - Apostas Online">
+  <meta property="og:description" content="Acesse a plataforma Vai Dar Boa.">
+  <meta property="og:url" content="https://vaidarboa.vip/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://vaidarboa.vip/favicon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://app.bancavaidarboa.club" crossorigin>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MREJ9TL12B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MREJ9TL12B');
+  </script>
+
+  <!-- Google Ads -->
+  <script>
+    gtag('config', 'AW-17884379098');
+  </script>
 
   <style>
-    * {
+    :root {
+      --primary: #25D366;
+    }
+
+    *, *::before, *::after {
       box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
       padding: 0;
-    }
-
-    html,
-    body {
       width: 100%;
-      min-height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Roboto', system-ui, sans-serif;
+      background: #f4f6f8;
     }
 
-    body {
-      background:
-        radial-gradient(circle at 50% 15%, rgba(93, 255, 0, 0.13), transparent 30%),
-        linear-gradient(145deg, #000000 0%, #00140a 50%, #000000 100%);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.12;
-      background-image:
-        linear-gradient(45deg, transparent 48%, #58ff00 49%, transparent 50%),
-        linear-gradient(-45deg, transparent 48%, #58ff00 49%, transparent 50%);
-      background-size: 180px 180px;
-    }
-
-    .container {
+    .section {
       width: 100%;
-      max-width: 900px;
-      min-height: 100vh;
-      margin: auto;
-      padding: 35px 20px 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      height: 100dvh;
       position: relative;
+    }
+
+    .iframe-placeholder {
+      position: absolute;
+      inset: 0;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
       z-index: 2;
+      transition: opacity 0.4s ease;
     }
 
-    /* LOGO */
-
-    .logo {
-      width: 210px;
-      max-width: 65vw;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 18px rgba(101, 255, 0, 0.35));
-    }
-
-    /* ÍCONE */
-
-    .tools {
-      font-size: 58px;
-      margin: 5px 0 10px;
-      filter: drop-shadow(0 0 12px rgba(106, 255, 0, 0.8));
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.08);
-      }
-    }
-
-    /* TÍTULO */
-
-    h1 {
-      text-align: center;
-      font-size: clamp(42px, 8vw, 82px);
-      font-weight: 900;
-      line-height: 0.95;
-      letter-spacing: -2px;
-      color: #fff;
-      text-transform: uppercase;
-      text-shadow: 0 0 15px rgba(255,255,255,0.12);
-    }
-
-    h1 span {
-      color: #69ff00;
-      display: block;
-      text-shadow: 0 0 18px rgba(105, 255, 0, 0.35);
-    }
-
-    .subtitle {
-      margin-top: 24px;
-      text-align: center;
-      font-size: clamp(18px, 3vw, 25px);
-      line-height: 1.4;
-      color: #eee;
-      max-width: 700px;
-    }
-
-    .subtitle strong {
-      color: #69ff00;
-    }
-
-    /* CARD */
-
-    .card {
-      width: 100%;
-      max-width: 760px;
-      margin-top: 35px;
-      padding: 28px;
-      border: 1px solid #69ff00;
-      border-radius: 20px;
-      background: rgba(0, 25, 10, 0.75);
-      box-shadow:
-        0 0 25px rgba(105, 255, 0, 0.10),
-        inset 0 0 30px rgba(105, 255, 0, 0.03);
-      text-align: center;
-    }
-
-    .card-title {
-      font-size: 20px;
-      color: #ddd;
-      margin-bottom: 18px;
-    }
-
-    .brand {
-      font-size: clamp(36px, 7vw, 58px);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -2px;
-      margin-bottom: 8px;
-    }
-
-    .brand .white {
-      color: #fff;
-    }
-
-    .brand .green {
-      color: #69ff00;
-      text-shadow: 0 0 15px rgba(105, 255, 0, 0.3);
-    }
-
-    .site-url {
-      font-size: 16px;
-      color: #bbb;
-      margin-bottom: 25px;
-    }
-
-    /* BOTÃO */
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      max-width: 460px;
-      min-height: 58px;
-      padding: 15px 25px;
-      border-radius: 12px;
-      background: linear-gradient(90deg, #49b900, #83ff22);
-      color: #071000;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 900;
-      text-transform: uppercase;
-      box-shadow: 0 0 25px rgba(105, 255, 0, 0.3);
-      transition: 0.25s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px) scale(1.01);
-      box-shadow: 0 0 35px rgba(105, 255, 0, 0.5);
-    }
-
-    .button:active {
-      transform: scale(0.98);
-    }
-
-    /* BÔNUS */
-
-    .bonus {
-      width: 100%;
-      max-width: 760px;
-      margin-top: 22px;
-      padding: 25px;
-      border: 1px solid #69ff00;
-      border-radius: 20px;
-      background: rgba(0, 20, 8, 0.75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 22px;
-    }
-
-    .gift {
-      width: 75px;
-      height: 75px;
-      min-width: 75px;
-      border: 2px solid #69ff00;
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 5px solid rgba(255,255,255,0.2);
+      border-top-color: #fff;
       border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 16px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .iframe-placeholder.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 1;
+    }
+
+    /* WhatsApp */
+    .fab-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .fab-main {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 38px;
-      box-shadow: 0 0 20px rgba(105, 255, 0, 0.15);
-    }
-
-    .bonus-text {
-      font-size: clamp(20px, 4vw, 29px);
-      font-weight: 800;
-      line-height: 1.25;
-    }
-
-    .bonus-text span {
-      color: #69ff00;
-      display: block;
-    }
-
-    /* CONTADOR */
-
-    .redirect {
-      margin-top: 20px;
-      color: #aaa;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .redirect strong {
-      color: #69ff00;
-    }
-
-    /* BENEFÍCIOS */
-
-    .benefits {
-      width: 100%;
-      max-width: 800px;
-      margin-top: 35px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .benefit {
-      text-align: center;
-      font-size: 13px;
-      color: #ddd;
-      padding: 10px;
-    }
-
-    .benefit-icon {
-      font-size: 27px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .benefit strong {
-      display: block;
+      gap: 10px;
+      padding: 13px 20px;
+      background: var(--primary);
       color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
     }
 
-    /* FOOTER */
-
-    footer {
-      margin-top: 30px;
-      padding-bottom: 10px;
-      color: #666;
-      font-size: 12px;
-      text-align: center;
+    .fab-main:hover {
+      transform: scale(1.05);
     }
 
-    /* MOBILE */
+    .fab-main i {
+      font-size: 24px;
+    }
 
-    @media (max-width: 650px) {
-
-      .container {
-        padding: 25px 15px;
+    @media (max-width: 600px) {
+      .fab-container {
+        bottom: 15px;
+        right: 15px;
       }
 
-      .logo {
-        width: 170px;
-      }
-
-      .tools {
-        font-size: 45px;
-      }
-
-      h1 {
-        font-size: 47px;
-      }
-
-      .subtitle {
-        font-size: 17px;
-        margin-top: 18px;
-      }
-
-      .card {
-        margin-top: 25px;
-        padding: 22px 15px;
-      }
-
-      .brand {
-        font-size: 37px;
-      }
-
-      .site-url {
+      .fab-main {
+        padding: 12px 16px;
         font-size: 14px;
-      }
-
-      .bonus {
-        padding: 18px 15px;
-        gap: 15px;
-      }
-
-      .gift {
-        width: 58px;
-        height: 58px;
-        min-width: 58px;
-        font-size: 28px;
-      }
-
-      .bonus-text {
-        font-size: 19px;
-      }
-
-      .button {
-        font-size: 17px;
-      }
-
-      .benefits {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
       }
     }
   </style>
@@ -354,129 +163,61 @@
 
 <body>
 
-  <main class="container">
+  <main>
+    <div id="vai-dar-boa" class="section">
 
-    <!-- LOGO -->
-    <img
-      src="coelho.webp"
-      alt="Vai Dar Boa"
-      class="logo"
-    >
-
-    <!-- ÍCONE -->
-    <div class="tools">🛠️</div>
-
-    <!-- TÍTULO -->
-    <h1>
-      SITE EM
-      <span>ATUALIZAÇÃO</span>
-    </h1>
-
-    <p class="subtitle">
-      Estamos trabalhando para oferecer
-      <strong>a melhor experiência</strong> para você!
-    </p>
-
-    <!-- SUPER ACERTOS -->
-    <section class="card">
-
-      <div class="card-title">
-        Enquanto isso, você será direcionado para:
+      <div id="placeholder" class="iframe-placeholder">
+        <div class="spinner"></div>
+        <div>Carregando Vai Dar Boa...</div>
       </div>
 
-      <div class="brand">
-        <span class="white">SUPER</span><span class="green">ACERTOS</span>
-      </div>
+      <iframe
+        id="main-iframe"
+        src="https://app.bancavaidarboa.club/pr/5Qkym93s"
+        fetchpriority="high"
+        referrerpolicy="no-referrer-when-downgrade"
+        allow="clipboard-read; clipboard-write; fullscreen; autoplay; encrypted-media"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-clipboard-read allow-clipboard-write"
+        title="Plataforma Vai Dar Boa">
+      </iframe>
 
-      <div class="site-url">
-        superacertos.com.br
-      </div>
-
-      <a
-        href="https://superacertos.com.br/"
-        class="button"
-      >
-        🚀 ACESSAR AGORA
-      </a>
-
-    </section>
-
-    <!-- BÔNUS -->
-    <section class="bonus">
-
-      <div class="gift">
-        🎁
-      </div>
-
-      <div class="bonus-text">
-        Entre e se cadastre-se para
-        <span>não perder os bônus</span>
-      </div>
-
-    </section>
-
-    <!-- CONTADOR -->
-    <div class="redirect">
-      Você será redirecionado automaticamente em
-      <strong><span id="contador">8</span> segundos</strong>.
     </div>
-
-    <!-- BENEFÍCIOS -->
-    <section class="benefits">
-
-      <div class="benefit">
-        <span class="benefit-icon">🛡️</span>
-        <strong>SITE SEGURO</strong>
-      </div>
-
-      <div class="benefit">
-        <span class="benefit-icon">⚡</span>
-        <strong>PIX RÁPIDO</strong>
-      </div>
-
-      <div class="benefit">
-        <span class="benefit-icon">🎧</span>
-        <strong>ATENDIMENTO</strong>
-      </div>
-
-      <div class="benefit">
-        <span class="benefit-icon">🔒</span>
-        <strong>ACESSO SEGURO</strong>
-      </div>
-
-    </section>
-
-    <footer>
-      © Vai Dar Boa — Em atualização
-    </footer>
-
   </main>
 
+  <!-- WhatsApp -->
+  <div class="fab-container">
+    <a
+      href="https://wa.me/5567981530813?text=Ol%C3%A1%20suporte%2C%20vim%20pelo%20site%20Vai%20Dar%20Boa%20e%20preciso%20de%20ajuda"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fab-main"
+      aria-label="Falar com suporte no WhatsApp">
 
-  <!-- REDIRECIONAMENTO AUTOMÁTICO -->
+      <i class="fab fa-whatsapp"></i>
+      <span>Suporte</span>
+
+    </a>
+  </div>
+
   <script>
+    const iframe = document.getElementById('main-iframe');
+    const placeholder = document.getElementById('placeholder');
 
-    let segundos = 8;
+    iframe.addEventListener('load', () => {
+      placeholder.classList.add('hidden');
 
-    const contador = document.getElementById("contador");
+      setTimeout(() => {
+        placeholder.style.display = 'none';
+      }, 400);
+    });
 
-    const intervalo = setInterval(function () {
-
-      segundos--;
-
-      contador.textContent = segundos;
-
-      if (segundos <= 0) {
-
-        clearInterval(intervalo);
-
-        window.location.href = "https://superacertos.com.br/";
-
+    setTimeout(() => {
+      if (!placeholder.classList.contains('hidden')) {
+        placeholder.classList.add('hidden');
       }
-
-    }, 1000);
-
+    }, 8000);
   </script>
 
 </body>
 </html>
+```
